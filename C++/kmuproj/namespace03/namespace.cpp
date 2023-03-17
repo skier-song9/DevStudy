@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> 
 
 namespace ns1 {
 void test() {
@@ -21,6 +21,11 @@ void test() {
     std::cout << "Good Morning!" << "\n";
 }
 }
+
+//📢 using namespace 네임스페이스명 
+//    : main()함수에서 해당 네임스페이스명을 '기본값'으로 사용한다.
+//  ex) using namespace ns1; >> ns1의 test()함수는 ns1::test()처럼 호출하지 않고,
+//      그냥 test()로 호출한다.
 
 int main(int argc, char const *argv[])
 {
