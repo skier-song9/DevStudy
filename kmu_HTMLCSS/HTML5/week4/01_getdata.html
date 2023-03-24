@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET방식 요청 받기</title>
+</head>
+<script>
+    //📢자바스크립트로 URL파라미터 받기
+    // new URLSearchParams(location.search) : URL파라미터를 전부 받는다.
+    const searchParams = new URLSearchParams(location.search);
+    console.log(searchParams)
+    for (let param of searchParams){
+        console.log(param)
+    }
+    // const id = searchParams[0][1]
+    // const password = searchParams[1][1]
+
+    // new URL(location.href).searchParams.get('파라미터명') : 특정 URL파라미터를 가져온다.
+    const urlParams = new URL(location.href).searchParams;
+    const id = urlParams.get('id')
+    const password = urlParams.get('password')
+
+    window.addEventListener('load',()=>{
+        document.querySelector('#id').textContent=id
+        document.querySelector('#password').textContent=password
+    })
+</script>
+<body>
+    <h2>웹 브라우저 URL 주소 입력 부분을 살펴보세요.</h2>
+    <ul>
+        <li> 아이디 : <span id="id"></span></li>
+        <li> 비밀번호 : <span id="password"></span></li>
+    </ul>
+</body>
+</html>
