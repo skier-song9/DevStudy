@@ -1,6 +1,7 @@
 #include <iostream>
 
 void find(int arr[], int size, int target);
+int find_index(int arr[],int size, int target);
 
 using namespace std;
 
@@ -24,6 +25,8 @@ int main(int argc, char const *argv[])
     cout << sizeof(arr) << "\n"; //24(bytes)
     cout << "length of array : " << sizeof(arr)/sizeof(arr[0]) << "\n"; 
 
+    cout << "find_index : " << find_index(arr,SIZE,target) << "\n";
+
     return 0;
 }
 
@@ -33,15 +36,29 @@ void find(int arr[],int size, int target){
     for (int i = 0; i< size; i++){
         if(arr[i]==target){
             std::cout << "found = " << i << "\n";
+            break;
         }
     }
 }
 
-void find_(int arr[],int size, int target){
-    cout << sizeof(arr) << "\n"; // this is size of pointer >> pointer is 8bytes in 64bit machine. 4bytes in 32bit machine
-    for (int i = 0; i< size; i++){
-        if(arr[i]==target){
-            std::cout << "found = " << i << "\n";
+int find_index(int arr[],int size,int target){
+    int ret = -1;
+    for (int i = 0; i < size; i++)
+    {
+        if(target==arr[i]){
+            return i;
+            //continue, break 사용 시,
+            //ret = i;
+            //break; 를 추가한다.
+
+            //또는
+            /*
+            if (target != arr[i]){
+                continue;
+            }
+            ret = i;
+            */
         }
     }
+    return ret;
 }
