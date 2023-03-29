@@ -1,6 +1,7 @@
 /*************************************************************************
 * *
-* Problem: 
+* Problem: 각 숫자의 일의 자리를 구해서 곱한 후, 다시 그 결과의 일의 자리를 구해서
+            또 일의 자리끼리 곱한다. 
 * *
 *************************************************************************/
 /*************************************************************************
@@ -14,34 +15,31 @@
 #include <cmath>
 
 using namespace std;
-
 int main()
 {
     int t;
     cin >> t;
-
     while (t--)
     {
         int n = 0;
         cin >> n;
 
-        int arr[n];
-
+        int init;
+        int repeat;
+        cin >> init;
         
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n-1; i++)
         {
-            cin >> arr[i];
-            cout<< (int)(arr[i] / (int)pow(10,(int)log10(arr[i]))) <<", ";
+            init = init % 10;            
+            cin >> repeat;
+
+            if ((int)pow(10,(int)log10(repeat)) != 1){
+                repeat = repeat % 10;    
+            }
+
+            init = init*repeat;
         }////////for
-
-        // for (int i = 0; i < n; i++)
-        // {
-        //     cout<<arr[i]<<", ";
-        // }
-        cout << endl;
-        
-        
+        cout << init % 10 << "\n";
     }////////while
-
     return 0;
 }
