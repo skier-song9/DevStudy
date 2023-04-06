@@ -12,8 +12,19 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n;
+        int n = 0;
         cin >> n;
+        int num0=0;
+        int num1=0;
+        do{
+            if (n & 1)
+                num1++;
+            else
+                num0++;
+            n = n >> 1;
+        } while (n>0);
+        
+        cout << num0 << " " << num1 << endl;
     }////////while
 
     end = clock();
