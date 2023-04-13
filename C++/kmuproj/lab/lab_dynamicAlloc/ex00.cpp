@@ -16,5 +16,7 @@ int main(int argc, char const *argv[])
     cout << n << endl; //0x237d9c91710
     cout << *n << endl; //90
 
+    delete n;
+
     return 0;
 }
