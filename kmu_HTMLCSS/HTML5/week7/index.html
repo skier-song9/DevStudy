@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <title>HTML</title>
+    <!--초기화-->
+    <style>
+        *{margin:0; padding:0;}
+        body{font-family: sans-serif;}
+        li{list-style: none;}
+        a{text-decoration: none;}
+        img{border: 0;}
+    </style>
+    <!--헤더-->
+    <style>
+        #main_header{
+            /* 중앙 정렬 */
+            width: 960px;
+            margin: 0 auto;
+            /* 상대 좌표 */
+            height: 160px;
+            position: relative;
+        }
+
+        #main_header > #main_gnb{
+            position:absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #main_header > #main_lnb{
+            position:absolute;
+            right: 0;
+            bottom: 10px;
+        }
+    </style>
+    <!--타이틀-->
+    <style>
+        #main_header > #title{
+            /* 절대 좌표 */
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            /* 구글 폰트 적용 */
+            font-family: 'Sedgwick Ave Display', cursive;
+            font-size: 1.7rem;
+        }
+    </style>
+    <!--메뉴(1)-->
+    <style>
+        #main_gnb > ul {overflow:hidden;}
+        #main_gnb > ul > li {float: left;}
+        #main_gnb > ul > li > a {
+            display: block;
+            padding: 2px 10px;
+            border: 1px solid black;
+        }
+        #main_gnb > ul > li > a:hover {
+            background: black;
+            color: white;
+        }
+        #main_gnb > ul > li:first-child > a {border-radius: 10px 0 0 10px;}
+        #main_gnb > ul > li:last-child > a {border-radius: 0 10px 10px 0;}
+    </style>
+    <!--메뉴(2)-->
+    <style>
+        #main_lnb > ul {overflow:hidden;}
+        #main_lnb > ul > li {float: left;}
+        #main_lnb > ul > li > a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+        #main_lnb > ul > li > a:hover {
+            background: black;
+            color: white;
+        }
+        #main_lnb > ul > li:first-child > a {border-radius: 10px 0 0 10px;}
+        #main_lnb > ul > li:last-child > a {border-radius: 0 10px 10px 0;}        
+    </style>
+    <!--컨텐츠-->
+    <style>
+        #content{
+            /* 중앙 정릴 */
+            width: 960px; margin: 0 auto;
+            /* 수평 레이아웃 구성 */
+            overflow: hidden;
+        }
+        #content > #main_section {
+            width: 750px;
+            float: left;
+        }
+        #content > #main_aside {
+            width: 200px;
+            float: right;
+        }
+    </style>
+    <!--본문-->
+    <style>
+        #main_section > .main_article {
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+    <!--탭 모양 구성-->
+    <style>
+        section.buttons{overflow:hidden;}
+        section.buttons > label{
+            /* 수평 정렬 */
+            display: block; float:left;
+            /* 크기 및 글자 위치 조정 */
+            width: 100px; height: 30px;
+            line-height: 30px;
+            text-align: center;
+            /* 테두리 지정 */
+            box-sizing: border-box;
+            border: 1px solid black;
+            /* 색상 지정 */
+            background: black;
+            color: white;
+        }
+        input:nth-of-type(1):checked ~ section.buttons > label:nth-of-type(1) {
+            background: white;
+            color: black;
+        }
+        input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {
+            background: white;
+            color: black;
+        }
+    </style>
+    <!--목록-->
+    <style></style>
+    <!--푸터-->
+    <style></style>
+</head>
+<body>
+    <header id="main_header">
+        <div id="title">
+            <h1>Rint Development</h1>
+            <h2>HTML5 + CSS3 Basic</h2>
+        </div>
+        <nav id="main_gnb"> <!-- gnb = global navigation bar 의 약자 -->
+            <ul>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Game</a></li>
+                <li><a href="#">Simulation</a></li>
+                <li><a href="#">Data</a></li>
+            </ul>
+        </nav>
+        <nav id="main_lnb"> <!-- lnb = local navigation bar 의 약자 -->
+            <ul>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+        <section id="main_section">
+            <article class="main_article">
+                <h2>Main Article</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus similique at quibusdam, impedit distinctio doloremque inventore dolorem reiciendis maiores adipisci, illo nisi earum? Harum fuga, exercitationem sit suscipit debitis nostrum.</p>    
+            </article>
+            <article class="main_article">
+                <h2>Main Article</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus similique at quibusdam, impedit distinctio doloremque inventore dolorem reiciendis maiores adipisci, illo nisi earum? Harum fuga, exercitationem sit suscipit debitis nostrum.</p>
+            </article>
+            <article class="main_article">
+                <h2>Main Article</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus similique at quibusdam, impedit distinctio doloremque inventore dolorem reiciendis maiores adipisci, illo nisi earum? Harum fuga, exercitationem sit suscipit debitis nostrum.</p>
+            </article>            
+        </section>
+        <aside id="main_aside">
+            <section class="buttons">
+                <label for="">First</label>
+                
+            </section>
+            <section class="buttons">
+                <label for="">Second</label>
+            </section>
+            
+
+            <h2>Main Aside</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus similique at quibusdam, impedit distinctio doloremque inventore dolorem reiciendis maiores adipisci, illo nisi earum? Harum fuga, exercitationem sit suscipit debitis nostrum.</p>
+        </aside>
+    </div>
+    <footer></footer>
+</body>
+</html>
