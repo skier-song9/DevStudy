@@ -1,34 +1,24 @@
 #include <iostream>
-#include <cstdlib>
-#include <math.h>
 using namespace std;
-int main()
-{
-    int t;
-    cin >> t;
-    while(t--)
-    {
-        int k;
-        cin >> k;
 
-        long long digit = 1;
-        long long count = 9;
-        long long start = 1;
-
-        while (k > count * digit) {
-            k -= count * digit;
-            digit++;
-            count *= 10;
-            start *= 10;
-        }
-
-        long long num = start + (k - 1) / digit;
-
-        long long index = (k - 1) % digit;
-
-        long long result = (long long)(num / (int)pow(10, digit - 1 - index)) % 10;
-
-        cout << result << endl;
+class A {
+    public:
+    A(int x) {
+        cout << "A의 생성자 함수 호출!" << endl;
     }
+};
+
+struct B{
+    int x;
+    B(int x) : x{x} {
+        cout << "구조체 B의 생성자 호출!" << endl;
+    }
+};
+
+int main(int argc, char const *argv[])
+{
+    
+    int arr[];
+
     return 0;
 }
