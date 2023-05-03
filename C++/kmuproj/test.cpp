@@ -17,8 +17,9 @@ struct B{
 
 int main(int argc, char const *argv[])
 {
-    
-    int arr[];
+    char ch{'a'};
+    string str['abc'];
 
+    cout << ch << ", " << str << endl;
     return 0;
 }
