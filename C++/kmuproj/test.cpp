@@ -1,25 +1,31 @@
 #include <iostream>
+#include <sstream>
+#include <random>
 using namespace std;
 
-class A {
-    public:
-    A(int x) {
-        cout << "A의 생성자 함수 호출!" << endl;
-    }
-};
+void pp(char othello[8][8]){
+    cout << othello[0][0] << endl;
+    cout << othello[4][4] << endl;
+    cout << othello[5][5] << endl;
+}
 
-struct B{
-    int x;
-    B(int x) : x{x} {
-        cout << "구조체 B의 생성자 호출!" << endl;
-    }
-};
-
-int main(int argc, char const *argv[])
+int main()
 {
-    char ch{'a'};
-    string str['abc'];
+    
+    char othello[8][8]{};
+    for (int i=0;i<8;i++){
+        for(int j=0;j<8;j++){
+            if(othello[i][j]=='\0'){
+                cout << '+' << " ";
+            }
+            else cout << othello[i][j];
+            // cout << othello[i][j] == ''?'+':othello[i][j] ;
+        }
+        cout << endl;
+    }
+    othello[4][4] = '-';
+    othello[5][5] = '*';
 
-    cout << ch << ", " << str << endl;
+    pp(othello);
     return 0;
 }
