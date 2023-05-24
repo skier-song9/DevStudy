@@ -4,7 +4,8 @@
         "iterator": "cpp",
         "ostream": "cpp",
         "cmath": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "iosfwd": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
