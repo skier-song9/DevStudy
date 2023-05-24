@@ -9,36 +9,229 @@ private:
     long _den; // denominator
 public:
     //ctor
-    myRational();
     myRational(int p=0,int q=1);
     myRational(const myRational& r);
     //getter/setter
-    long getNum();
-    long getDen();
-    void setNum(long n);
-    void setDen(long d);
+    long gn();
+    long gd();
+    void sn(long n);
+    void sd(long d);
     void set(long n, long d);
-    //operator overloading
     long gcd(long m, long n); // 최대공약수
     void reduce();
-};
+    //operator overloading
+};/////////////class
 
-myRational::myRational()
-    :_num(0),_den(0){};
-myRational::myRational(int p=0,int q=0)
-    :_num(p),_den(q){};
+myRational::myRational(int p=0,int q=1)
+    :_num(p),_den(q){ reduce(); };
 myRational::myRational(const myRational& r){
     _num = r._num;
     _den = r._den;
+    reduce();
 };
-long myRational::getNum(){ return _num; };
-long myRational::getDen(){ return _den; };
-void myRational::setNum(long n){ _num = n; };
-void myRational::setDen(long d){ _den = d; };
+long myRational::gn(){ return _num; };
+long myRational::gd(){ return _den; };
+void myRational::sn(long n){ _num = n; };
+void myRational::sd(long d){ _den = d; };
 void myRational::set(long n, long d){
-    _num = n;
-    _den = d;
+    if(n==0){
+        _num = n;
+        _den = 1;
+    }
+    else{
+        _num = n;
+        _den = d;
+    }
 };
+//Member Functions
+long myRational::gcd(long m, long n){
+    if (m ==n)
+        return n;
+    else if (m<n)
+        return gcd(m,n-m);
+    else 
+        return gcd(m-n,n);
+}; 
+void myRational::reduce(){
+    if (_num == 0 || _den ==0){
+        _num = 0;
+        _den = 1;
+        return;
+    }
+    if (_den < 0 ){
+        _den *= -1;
+        _num *=-1;
+    }
+    if (_num==1){
+        return;
+    }
+    int sgn = (_num < 0 ? -1 : 1);
+    long g = gcd(sgn * _num, _den);
+    _num /= g;
+    _den /= g;
+};
+myRational myRational::reciprocal() const{
+    long temp = _num;
+    _num = _den;
+    _den = temp;
+    return *this;
+};
+//Overloaded Operators
+// Overloaded binary operators
+myRational myRational::operator +(const myRational& mr) const
+{
+    long newNum = _num * mr._den + mr._num * _den;
+    long newDen = _den * mr._den;
+    return myRational(newNum,newDen);
+}
+myRational myRational::operator +(int value) const
+{
+    long newNum = _num + value * _den;
+    long newDen = _den;
+    return myRational(newNum,newDen);
+}
+myRational myRational::operator -(const myRational& mr) const
+{
+    long newNum = _num * mr._den + mr._num * _den;
+    long newDen = _den * mr._den;
+    return myRational(newNum,newDen);
+}
+myRational myRational::operator -(int value) const
+{
+    long newNum = _num + value * _den;
+    long newDen = _den;
+    return myRational(newNum,newDen);
+}
+myRational myRational::operator *(const myRational& mr) const
+{
+    long newNum = _num * mr._den + mr._num * _den;
+    long newDen = _den * mr._den;
+    return myRational(newNum,newDen);
+}
+myRational myRational::operator *(int value) const
+{
+    long newNum = _num + value * _den;
+    long newDen = _den;
+    return myRational(newNum,newDen);
+}
+myRational myRational::operator /(const myRational& mr) const
+{
+    long newNum = _num * mr._den + mr._num * _den;
+    long newDen = _den * mr._den;
+    return myRational(newNum,newDen);
+}
+myRational myRational::operator /(int value) const
+{
+    long newNum = _num + value * _den;
+    long newDen = _den;
+    return myRational(newNum,newDen);
+}
+// Assignment operators
+myRational& myRational::operator =(const myRational& mr)
+{
+    this->realPart = mr.realPart;
+    this->imaginaryPart = mr.imaginaryPart;
+    return *this;
+}
+myRational& myRational::operator =(int value)
+{
+    realPart = value;
+    imaginaryPart = 0;
+    return *this;
+}
+myRational& myRational::operator +=(const myRational& mr)
+{
+    realPart = realPart + mr.realPart;
+    imaginaryPart = imaginaryPart + mr.imaginaryPart;
+    return *this;
+}
+myRational& myRational::operator +=(int value)
+{
+    realPart = realPart + value;
+    return *this;
+}
+myRational& myRational::operator -=(const myRational& mr)
+{
+    realPart = realPart - mr.realPart;
+    imaginaryPart = imaginaryPart - mr.imaginaryPart;
+    return *this;
+}
+myRational& myRational::operator -=(int value)
+{
+    realPart = realPart - value;
+    return *this;
+}
+myRational& myRational::operator *=(const myRational& mr)
+{
+    int newReal = realPart * mr.realPart - imaginaryPart * mr.imaginaryPart;
+    int newImag = realPart * mr.imaginaryPart + imaginaryPart * mr.realPart;
+    this->realPart = newReal;
+    this->imaginaryPart = newImag;
+    return *this;
+}
+myRational& myRational::operator *=(int value)
+{
+    int newReal = realPart * value;
+    int newImag = imaginaryPart * value;
+    this->realPart = newReal;
+    this->imaginaryPart = newImag;
+    return *this;
+}
+// Overloading comparison operators
+bool myRational::operator ==(const myRational& mr) const
+{
+    return (realPart == mr.realPart) && 
+    (imaginaryPart == mr.imaginaryPart);
+}
+bool myRational::operator !=(const myRational& mr) const
+{
+    return !(*this == mr);
+}
+bool myRational::operator >(const myRational& mr) const
+{
+    bool b = norm() > mr.norm();
+    return b;
+}
+bool myRational::operator <(const myRational& mr) const
+{
+    return mr.norm() > norm();
+}
+bool myRational::operator >=(const myRational& mr) const
+{
+    return !(mr.norm() > norm());
+}
+bool myRational::operator <=(const myRational& mr) const
+{
+    return !(norm() > mr.norm());
+}
+// Overloaded unary operators
+myRational myRational::operator -() // unary minus
+{
+    return myRational(-realPart, -imaginaryPart);
+} 
+myRational myRational::operator~(){
+    return myRational(realPart,-imaginaryPart);
+}; 
+myRational myRational::operator++(){
+    ++realPart;
+    return *this;
+};
+myRational myRational::operator++(int){
+    myRational mr{realPart,imaginaryPart};
+    ++realPart;
+    return mr;
+};
+myRational myRational::operator--(){
+    --realPart;
+    return *this;
+};
+myRational myRational::operator--(int){
+    myRational mr{realPart,imaginaryPart};
+    --realPart;
+    return mr;
+};
+
+
 
 
 ostream &operator << (ostream &os, const myRational& r){
