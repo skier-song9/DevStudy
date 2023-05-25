@@ -1,0 +1,1 @@
+/usr/bin/c++  -fsanitize=leak,address CMakeFiles/shaper.dir/main.cpp.o CMakeFiles/shaper.dir/shape.cpp.o CMakeFiles/shaper.dir/rect.cpp.o CMakeFiles/shaper.dir/circle.cpp.o CMakeFiles/shaper.dir/triangle.cpp.o -o shaper 

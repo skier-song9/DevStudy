@@ -1,7 +1,16 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 int main(){
-	printf("%d",(1>0));
+
+	ifstream inputFile();
+	int t;
+	if (inputFile.is_open()){
+		inputFile >> t;
+		inputFile.close();
+		cout << "t: " << t << endl;
+	}
+	else{}
 
 	return 0;
 }
