@@ -1,12 +1,13 @@
-#include <list>
 #include <iostream>
 
-using namespace std;
-
 int main(){
+	int arr[10]{};
+	for(int i{};i<10;i++){
+		int t;
+		cin >> t;
+		arr[i] = t%42;
+	}
+	
 
-	cout << true << endl;
-	cout << false << endl;
-
-	return 0;
+    return 0;
 }

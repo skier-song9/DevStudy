@@ -1,0 +1,18 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [],    
+    "name": "Debug test.exe",
+    "type": "cppvsdbg",
+    "request": "launch",
+    "program": "../quiz/q22_polynomial/TestPoly.exe",
+    "args": [" < ", " in.dat "],
+    "miDebuggerPath": "gdb",
+    "stopAtEntry": false,
+    "cwd": "../quiz/q22_polynomial",
+    "externalConsole": true,
+    "showDisplayString": true,
+    
+}

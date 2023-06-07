@@ -8,11 +8,11 @@
 
 int main(int argc,char *argv[]){
 
-    initscr();
-    refresh();
+    initscr(); //ncurses 모드 시작
+    refresh(); // 출력
 
     //기본 벽 생성
-    Board board(BOARD_ROWS,BOARD_COLS);
+    Board board(BOARD_ROWS,BOARD_COLS); 
     board.initialize();
 
     getch();
