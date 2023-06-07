@@ -2,16 +2,18 @@
 
 class Board{
 public:
-    int body_mission;
-    int grow_mission;
-    int poison_mission;
-    int gate_mission;
-    WINDOW *score = newwin(15,50,5,100);
-    WINDOW *mission = newwin(15,50,26,100);
-    Board(int b, int g, int p, int d);
-    void ScoreBoard(int body, int body_max, int grow, int poison, int gate);
-    bool MissionBoard(int body, int gorw, int poision, int gate);
-    void gameover();
-private:
+    Board(int height, int width){
+        int xMax, yMax;
+        getmaxyx(stdscr, yMax, xMax);
 
+        board_win = newwin(height,width,(yMax/2)-(height/2),(xMax/2)-(width/2));
+        box(board_win,0,0);
+        wrefresh(board_win);
+
+        this->height = height;
+        this->width = width;
+    }
+private:
+    WINDOW *board_win;
+    int height, width;
 };
