@@ -1,5 +1,6 @@
 #pragma once
 #include "Drawable.hpp"
+#include <cstdlib>
 
 class Board{
 public:
@@ -31,6 +32,14 @@ public:
         return wgetch(board_win);
     }
 
+    void getEmptyCoordinates(int& y, int& x){
+        //mvwinch(window, y,x) : move cursor to location in window, and return which char is in that location
+        while((mvwinch(board_win, y = (rand() % (height)) ,x = (rand() % (width)))) != ' '){
+            mvwprintw(stdscr,1,1,"%d %d",y,x);
+            wrefresh(stdscr);
+        }
+    }
+
     void clear(){ //clear the whole board_win
         wclear(board_win);
         addBorder();
@@ -43,9 +52,11 @@ private:
     void construct(int height, int width){
         int xMax, yMax;
         getmaxyx(stdscr,yMax,xMax);
+        this->height = height;
+        this->width = width;
         board_win = newwin(height,width,(yMax/2)-(height/2),(xMax/2)-(width/2));
     }
 private:
     WINDOW *board_win;
-
+    int height, width;
 };
