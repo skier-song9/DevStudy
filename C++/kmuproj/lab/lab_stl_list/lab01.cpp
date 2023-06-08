@@ -9,7 +9,7 @@ template <class T>
 void print_container(const T& container, string s=""){
     cout << s << "(" << container.size() << ")";
     auto it = container.begin();
-    for(;it != container.end(); it++) {
+    for(;it != container.end(); it++) {w x 
         cout << *it << " ";
     }
     cout << endl;
@@ -24,5 +24,10 @@ int main(int argc, char const *argv[])
     l1.push_front('*');
     l1.push_back('a');
     print_container(l1,"l1 after push = ");
+
+    print_container(l2," l2 = ");
+
+
     return 0;
 }
+hello I may is songkdsjfd st
