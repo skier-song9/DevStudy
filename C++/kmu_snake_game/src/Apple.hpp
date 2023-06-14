@@ -11,7 +11,4 @@ public:
         this->icon = 'A';
     }
 
-
-
-
 };

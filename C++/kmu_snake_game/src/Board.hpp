@@ -32,12 +32,12 @@ public:
         return wgetch(board_win);
     }
 
-    void getEmptyCoordinates(int& y, int& x){
+    void getEmptyCoordinates(int &y, int &x){
         //mvwinch(window, y,x) : move cursor to location in window, and return which char is in that location
-        while((mvwinch(board_win, y = (rand() % (height)) ,x = (rand() % (width)))) != ' '){
-            mvwprintw(stdscr,1,1,"%d %d",y,x);
-            wrefresh(stdscr);
-        }
+        do {
+            y = rand() % height;
+            x = rand() % width;
+        } while((mvwinch(board_win,y,x)) != ' ');
     }
 
     void clear(){ //clear the whole board_win
@@ -45,18 +45,46 @@ public:
         addBorder();
     }
 
+    // for checking gmae over
+    chtype getCharAt(int y, int x){
+        return mvwinch(board_win,y,x);
+    }
+
     void refresh(){ //refresh the board_win window
         wrefresh(board_win);
     }
+
+    void setTimeout(int timeout){
+        wtimeout(board_win,timeout);
+    }
+
+    int getStartRow(){
+        return start_row;
+    }
+
+    int getStartCol(){
+        return start_col;
+    }
+
 private:
     void construct(int height, int width){
         int xMax, yMax;
         getmaxyx(stdscr,yMax,xMax);
         this->height = height;
         this->width = width;
-        board_win = newwin(height,width,(yMax/2)-(height/2),(xMax/2)-(width/2));
+
+        start_row = (yMax/2)-(height/2);
+        start_col = (xMax/2)-(width/2);
+        board_win = newwin(height,width,start_row,start_col);
+
+        // Timeout to repeat
+        wtimeout(board_win,1000);
+
+        // activate keypad
+        keypad(board_win,true);
+
     }
 private:
     WINDOW *board_win;
-    int height, width;
+    int height, width, start_row, start_col;
 };
