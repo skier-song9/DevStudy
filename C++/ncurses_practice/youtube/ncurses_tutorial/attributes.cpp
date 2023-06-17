@@ -29,7 +29,8 @@ int main(int argc, char const *argv[]) {
     //init_pair(pari_ID, contents color, bg color)
     //: set a pair1 as contents color yellow and bg color blue.
     init_pair(1,COLOR_YELLOW, COLOR_BLUE);
-
+    init_color(COLOR_GRAY,192,192,192)
+    init_pair(9,COLOR_GRAY,COLOR_YELLO);
 
     //check if user can customize const value
     if(can_change_color()){
@@ -58,6 +59,10 @@ int main(int argc, char const *argv[]) {
     printw("This is some text");
     attroff(COLOR_PAIR(1));
     attroff(A_BLINK);
+
+    attron(COLOR_PAIR(9));
+    printw("Color Gray");
+    attroff(COLOR_PAIR(9));
 
     getch();
 

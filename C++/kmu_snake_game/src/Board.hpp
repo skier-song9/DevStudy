@@ -24,8 +24,6 @@ public:
         init_pair(1,COLOR_BLACK,COLOR_BLACK);//corner color pair
         init_pair(2,COLOR_YELLOW,COLOR_YELLOW);//wall color pair
 
-        chtype '1'
-
         wborder(board_win,leftright,leftright,topbottom,topbottom,corner,corner,corner,corner);
 
     }

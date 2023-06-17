@@ -29,9 +29,14 @@ int main(int argc, char const *argv[]) {
     // box(win,65,69);
 
     int left,right,top,bottom,tlc,trc,blc,brc;
+    init_pair(1,COLOR_RED,COLOR_RED);
+    chtype leftright = 'g' | COLOR_PAIR(1);
+
     left = right = (int)'g';
     top = bottom = (int)'h';
     tlc = trc = blc = brc = (int)'+';
+
+
     //wborder(window obj, ~~~) : customize border shape
     wborder(win,left,right,top,bottom,tlc,trc,blc,brc);
 

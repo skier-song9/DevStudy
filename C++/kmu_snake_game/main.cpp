@@ -15,12 +15,6 @@ int main(int argc, char const *argv[]) {
 
     curs_set(0); //Turn off cursor
 
-    if(!has_colors(){
-        printw("Terminal does not Support Color...");
-        getch();
-        return -1;
-    })
-
     SnakeGame game(BOARD_ROWS, BOARD_COLS);
 
     while(!game.isOver()){
