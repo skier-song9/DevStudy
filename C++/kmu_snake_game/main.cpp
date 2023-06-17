@@ -4,7 +4,7 @@
 #include "src/SnakeGame.hpp"
 #include "src/Drawable.hpp"
 
-#define BOARD_DIM 25
+#define BOARD_DIM 17
 #define BOARD_ROWS BOARD_DIM
 #define BOARD_COLS BOARD_DIM * 2.0
 
@@ -14,6 +14,12 @@ int main(int argc, char const *argv[]) {
     noecho();
 
     curs_set(0); //Turn off cursor
+
+    if(!has_colors(){
+        printw("Terminal does not Support Color...");
+        getch();
+        return -1;
+    })
 
     SnakeGame game(BOARD_ROWS, BOARD_COLS);
 

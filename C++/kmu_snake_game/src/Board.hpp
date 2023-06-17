@@ -7,7 +7,7 @@
 class Board{
 public:
     Board(){ //default ctor
-        construct(0,0, 300);
+        construct(0,0, 500);
     }
     Board(int height, int width, int speed){
         construct(height,width,speed);
@@ -19,7 +19,15 @@ public:
     }
 
     void addBorder(){ //add basic border to a board_win
-        box(board_win,0,0);
+        char corner{'0'}, leftright{'1'}, topbottom{'2'};
+
+        init_pair(1,COLOR_BLACK,COLOR_BLACK);//corner color pair
+        init_pair(2,COLOR_YELLOW,COLOR_YELLOW);//wall color pair
+
+        chtype '1'
+
+        wborder(board_win,leftright,leftright,topbottom,topbottom,corner,corner,corner,corner);
+
     }
 
     void add(Drawable drawable){ // addAt() by Drawable class
@@ -96,7 +104,7 @@ private:
         this->width = width;
 
         start_row = (yMax/2)-(height/2);
-        start_col = (xMax/2)-(width/2);
+        start_col = (xMax/2)-(width);
         board_win = newwin(height,width,start_row,start_col);
 
         timeout = speed;

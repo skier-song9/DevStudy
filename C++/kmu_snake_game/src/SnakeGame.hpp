@@ -13,11 +13,11 @@
 
 class SnakeGame{ // main controller class
 public:
-    SnakeGame(int height, int width, int speed = 400){
+    SnakeGame(int height, int width, int speed = 500){        
         board = Board(height,width,speed);
-        int sb_row{board.getStartRow() + height};
-        int sb_col{board.getStartCol()};
-        scoreboard = Scoreboard(width, sb_row, sb_col);
+        int sb_row{board.getStartRow()};
+        int sb_col{board.getStartCol() + width + 3};
+        scoreboard = Scoreboard((width/2)+3, sb_row, sb_col);
         initialize();
     }
 
