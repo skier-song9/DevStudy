@@ -29,7 +29,7 @@ int main(int argc, char const *argv[]) {
 
     }
 
-    getch();
+    //getch();
     endwin();
 
     // basic gameover message

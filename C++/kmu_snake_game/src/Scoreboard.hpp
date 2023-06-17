@@ -12,14 +12,19 @@ public:
 
     void initialize(int initial_score){
         clear();
+        addBorder();
         mvwprintw(score_win, 1,1, "Score: ");
-        updateState(initial_score);
+        updateScore(initial_score);
         refresh();
     }
 
-    void updateState(int score){
+    void addBorder(){ //add basic border to a board_win
+        box(score_win,0,0);
+    }
+
+    void updateScore(int score){
         // llu = unsinged long long => print 11 width number, if not filled leave the space empty.
-        mvwprintw(score_win, 1, (score_win->_maxx)-10, "%11llu", score);
+        mvwprintw(score_win, 1, (score_win->_maxx)-11, "%11llu", score);
 
     }
 
@@ -34,6 +39,5 @@ public:
 
 private:
     WINDOW *score_win;
-
 
 };

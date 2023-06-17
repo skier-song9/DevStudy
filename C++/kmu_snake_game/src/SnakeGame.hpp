@@ -13,8 +13,8 @@
 
 class SnakeGame{ // main controller class
 public:
-    SnakeGame(int height, int width){
-        board = Board(height,width);
+    SnakeGame(int height, int width, int speed = 400){
+        board = Board(height,width,speed);
         int sb_row{board.getStartRow() + height};
         int sb_col{board.getStartCol()};
         scoreboard = Scoreboard(width, sb_row, sb_col);
@@ -59,6 +59,8 @@ public:
         chtype input = board.getInput();
         // process input : handle directional keys and pause state(timeout)
 
+        int old_timeout = board.getTimeout();
+
         switch(input){
             case KEY_UP:
             case 'w':
@@ -80,7 +82,7 @@ public:
                 board.setTimeout(-1); // block input
                 while(board.getInput() != 'p'){ // until user press p again, continue pause
                 }
-                board.setTimeout(1000);
+                board.setTimeout(old_timeout);
                 break;
             default:
                 break;
@@ -112,11 +114,13 @@ public:
     }
 
 private:
+    // 1. check if the next SnakePiece is on blank or apple or wall
+    // 2.
     void handleNextPiece(SnakePiece next){
         if(apple != NULL){
             switch (board.getCharAt(next.getY(),next.getX())) {
-                case 'A': //if next piece on apple, destroyAppple
-                    destroyAppple();
+                case 'A': //if next piece on apple, eatApple
+                    eatApple();
                     break;
                 case ' ': //if next piece is not on border or apple, move snake ahead.
                 {
@@ -143,7 +147,7 @@ private:
     void createApple(){
         int y,x;
         //srand(time(NULL));
-        board.getEmptyCoordinates(x,y); //get empty location and store y,x coordinates
+        board.getEmptyCoordinates(y,x); //get empty location and store y,x coordinates
         // if(apple != NULL)
         //     board.add(Empty(apple->getY(),apple->getX()));
         apple = new Apple(y,x);
@@ -151,10 +155,11 @@ private:
         board.add(*apple);
     }
 
-    void destroyAppple(){
+    void eatApple(){
         delete apple;
         apple = NULL;
-
+        score += 100;
+        scoreboard.updateScore(score);
     }
 
 private:

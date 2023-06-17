@@ -1,14 +1,16 @@
 #pragma once
 #include "Drawable.hpp"
 #include <cstdlib>
+#include <ncurses.h>
+#include "Time.hpp"
 
 class Board{
 public:
     Board(){ //default ctor
-        construct(0,0);
+        construct(0,0, 300);
     }
-    Board(int height, int width){
-        construct(height,width);
+    Board(int height, int width, int speed){
+        construct(height,width,speed);
     }
 
     void initialize(){ //initialize the board_win
@@ -21,7 +23,7 @@ public:
     }
 
     void add(Drawable drawable){ // addAt() by Drawable class
-        addAt(drawable.getX(),drawable.getY(),drawable.getIcon());
+        addAt(drawable.getY(),drawable.getX(),drawable.getIcon());
     }
 
     void addAt(int y, int x, chtype ch){ //move cursor to location and add char
@@ -29,7 +31,23 @@ public:
     }
 
     chtype getInput(){
-        return wgetch(board_win);
+        time_t time_last_input = Time::milliseconds();
+
+        chtype input = wgetch(board_win);
+        chtype new_input = ERR;
+
+        setTimeout(0);
+        while(time_last_input + timeout >= Time::milliseconds()){
+            new_input = wgetch(board_win);
+        }
+
+        setTimeout(timeout);
+
+        if(new_input != ERR){
+            input = new_input;
+        }
+
+        return input;
     }
 
     void getEmptyCoordinates(int &y, int &x){
@@ -66,8 +84,12 @@ public:
         return start_col;
     }
 
+    int getTimeout(){
+        return timeout;
+    }
+
 private:
-    void construct(int height, int width){
+    void construct(int height, int width, int speed){
         int xMax, yMax;
         getmaxyx(stdscr,yMax,xMax);
         this->height = height;
@@ -77,8 +99,10 @@ private:
         start_col = (xMax/2)-(width/2);
         board_win = newwin(height,width,start_row,start_col);
 
+        timeout = speed;
+
         // Timeout to repeat
-        wtimeout(board_win,1000);
+        setTimeout(speed);
 
         // activate keypad
         keypad(board_win,true);
@@ -87,4 +111,5 @@ private:
 private:
     WINDOW *board_win;
     int height, width, start_row, start_col;
+    int timeout;
 };

@@ -2,7 +2,9 @@
 #include <ncurses.h>
 #include "Drawable.hpp"
 #include <queue>
+
 enum Direction {
+    //assign values for easly checking opposite directin by adding two directions
     up = -1,
     down = 1,
     left = -2,
@@ -61,16 +63,16 @@ public:
 
         switch(cur_direction){
             case up:
-                col--;
-                break;
-            case down:
-                col++;
-                break;
-            case left:
                 row--;
                 break;
-            case right:
+            case down:
                 row++;
+                break;
+            case left:
+                col--;
+                break;
+            case right:
+                col++;
                 break;
         }
         return SnakePiece(row,col);
