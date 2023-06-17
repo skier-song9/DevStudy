@@ -1,8 +1,8 @@
 /**
  * @file GameCoverScene.cpp
- * 
+ *
  * @brief GameCoverScene 파일입니다.
- * 
+ *
  * @author parkgeonhu
  */
 #include "GameScene.h"

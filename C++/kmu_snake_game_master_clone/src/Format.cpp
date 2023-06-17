@@ -1,8 +1,8 @@
 /**
  * @file Format.cpp
- * 
+ *
  * @brief Format 파일입니다.
- * 
+ *
  * @author mindaein
  */
 #include <ncurses.h>
