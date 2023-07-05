@@ -63,3 +63,7 @@ $RECYCLE.BIN/
 # Spring Boot Tooling
 *.sts4-cache/
 *.sts3-cache/
+
+### jupyter notebook ###
+# pandas practice input data #
+./JupyterNotebook/kaggle_learns/Pandas/input/*
