@@ -66,4 +66,4 @@ $RECYCLE.BIN/
 
 ### jupyter notebook ###
 # pandas practice input data #
-./JupyterNotebook/kaggle_learns/Pandas/input/*
+JupyterNotebook/kaggle_learns/Pandas/input/
