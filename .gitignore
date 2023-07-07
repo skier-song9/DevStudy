@@ -65,5 +65,6 @@ $RECYCLE.BIN/
 *.sts3-cache/
 
 ### jupyter notebook ###
-# pandas practice input data #
+# input data #
 JupyterNotebook/kaggle_learns/Pandas/input/
+JupyterNotebook/kaggle_learns/GeoPandas/input/
