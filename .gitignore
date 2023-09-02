@@ -68,3 +68,12 @@ $RECYCLE.BIN/
 # input data #
 JupyterNotebook/kaggle_learns/Pandas/input/
 JupyterNotebook/kaggle_learns/GeoPandas/input/
+
+# largfile
+JupyterNotebook/BITAmin12/review_proj/data/mnist_784.csv
+
+#study folder
+JupyterNotebook/BITAmin12/study/밑시딥
+
+# every data file
+*.csv
