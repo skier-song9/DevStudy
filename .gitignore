@@ -74,6 +74,7 @@ JupyterNotebook/BITAmin12/review_proj/data/mnist_784.csv
 
 #study folder
 JupyterNotebook/BITAmin12/study/밑시딥
+JupyterNotebook/BITAmin12/study/밑시딥실습
 
 # every data file
 *.csv
