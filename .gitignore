@@ -72,9 +72,15 @@ JupyterNotebook/kaggle_learns/GeoPandas/input/
 # largfile
 JupyterNotebook/BITAmin12/review_proj/data/mnist_784.csv
 
+#BITAmin textbook github폴더
+JupyterNotebook/BITAmin12/textbook/pymlrev2-main/
+
 #study folder
 JupyterNotebook/BITAmin12/study/밑시딥
 JupyterNotebook/BITAmin12/study/밑시딥실습
 
 # every data file
 *.csv
+*.xls
+*.xlsx
+*.xlsm
