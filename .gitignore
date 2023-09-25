@@ -8,6 +8,11 @@ dist/
 # Sensitive Configuration files - DataBase, MyBatis, ...
 *.properties
 
+### C++ ###
+# 학교 폴더
+C++/kmu_snake_game/
+C++/kmu_proj/
+
 ### Java ###
 # Compiled class file
 *.class
@@ -74,6 +79,10 @@ JupyterNotebook/BITAmin12/review_proj/data/mnist_784.csv
 
 #BITAmin textbook github폴더
 JupyterNotebook/BITAmin12/textbook/pymlrev2-main/
+#BITAmin 개인적인 폴더
+JupyterNotebook/BITAmin12/prev_proj/
+JupyterNotebook/BITAmin12/review_proj/
+JupyterNotebook/BITAmin12/practice_proj/
 
 #study folder
 JupyterNotebook/BITAmin12/study/밑시딥
