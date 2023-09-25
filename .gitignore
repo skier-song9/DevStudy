@@ -1,4 +1,11 @@
+### setting folder & files
 desktop.ini
+*/desktop.ini
+*/.ipynb_checkpoints/
+*/.vscode/
+*/.ipynb_checkpoints/*
+*/.vscode/*
+
 node_modules/
 dist/
 **/node_modules/
