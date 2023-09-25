@@ -3,9 +3,12 @@ desktop.ini
 */desktop.ini
 */.ipynb_checkpoints/
 */.vscode/
+**/.ipynb_checkpoints/
+**/.vscode/
 */.ipynb_checkpoints/*
 */.vscode/*
 */.env
+**/.env
 
 
 node_modules/
