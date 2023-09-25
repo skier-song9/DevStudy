@@ -5,6 +5,8 @@ desktop.ini
 */.vscode/
 */.ipynb_checkpoints/*
 */.vscode/*
+*/.env
+
 
 node_modules/
 dist/
@@ -20,6 +22,7 @@ dist/
 # 학교 폴더
 C++/kmu_snake_game/
 C++/kmu_proj/
+C++/kmuproj/
 
 ### Java ###
 # Compiled class file

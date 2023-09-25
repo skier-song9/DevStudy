@@ -1,3 +1,0 @@
-/mnt/d/SKH/DevStudy/C++/kmuproj/cmakeProj1/Ex00/CMakeFiles/Ex00.dir
-/mnt/d/SKH/DevStudy/C++/kmuproj/cmakeProj1/Ex00/CMakeFiles/edit_cache.dir
-/mnt/d/SKH/DevStudy/C++/kmuproj/cmakeProj1/Ex00/CMakeFiles/rebuild_cache.dir

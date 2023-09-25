@@ -1,3 +1,0 @@
-/mnt/d/SKH/DevStudy/C++/kmuproj/shape-project/build/CMakeFiles/shaper.dir
-/mnt/d/SKH/DevStudy/C++/kmuproj/shape-project/build/CMakeFiles/edit_cache.dir
-/mnt/d/SKH/DevStudy/C++/kmuproj/shape-project/build/CMakeFiles/rebuild_cache.dir
