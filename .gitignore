@@ -107,3 +107,8 @@ JupyterNotebook/BITAmin12/study/밑시딥실습
 *.xls
 *.xlsx
 *.xlsm
+
+# DACON project
+### HD_선박 대기시간 예측
+JupyterNotebook/DACON/HD_ship/data/**
+JupyterNotebook/DACON/KMU_HR/data/**
