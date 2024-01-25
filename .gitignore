@@ -94,8 +94,11 @@ JupyterNotebook/BITAmin12/review_proj/data/mnist_784.csv
 #BITAmin textbook github폴더
 JupyterNotebook/BITAmin12/textbook/pymlrev2-main/
 #BITAmin 개인적인 폴더
-JupyterNotebook/BITAmin12/prev_proj/
-JupyterNotebook/BITAmin12/review_proj/
+JupyterNotebook/BITAmin12/23_1_prev_proj/
+JupyterNotebook/BITAmin12/23_1_review_proj/
+JupyterNotebook/BITAmin12/24_vac_prev_proj/
+JupyterNotebook/BITAmin12/24_vac_review_proj/
+
 JupyterNotebook/BITAmin12/practice_proj/
 
 #study folder
@@ -107,6 +110,11 @@ JupyterNotebook/BITAmin12/study/밑시딥실습
 *.xls
 *.xlsx
 *.xlsm
+*.tsv
+*.7z
+*.gz
+*.dat
+*.html
 
 # DACON project
 ### HD_선박 대기시간 예측
@@ -116,3 +124,24 @@ JupyterNotebook/DACON/KMU_HR/data/**
 JupyterNotebook/BITAmin12/study/paper/data/**
 JupyterNotebook/BITAmin12/study/paper/dataset/**
 JupyterNotebook/pythonWorkspace/PyTorch/080289-main/**
+
+JupyterNotebook/DACON/*/data/**
+JupyterNotebook/DACON/*/models/**
+JupyterNotebook/DACON/*/plots/**
+
+JupyterNotebook/DACON/Daegu_Car/code/AutoML_003_preprocessed/**
+JupyterNotebook/DACON/Daegu_Car/code/AutoML_001_42665/**
+JupyterNotebook/DACON/Daegu_Car/code/AutoML_001_Optuna/**
+JupyterNotebook/DACON/Daegu_Car/code/AutoML_001_Optuna_new/**
+JupyterNotebook/DACON/Daegu_Car/code/AutoML_004_some_scaling/**
+JupyterNotebook/DACON/Daegu_Car/code/AutoML_005_Compete/**
+JupyterNotebook/DACON/Daegu_Car/code/AutoML_005_withScale_Compete/**
+JupyterNotebook/DACON/Daegu_Car/code/AutoML_006_Compete/**
+JupyterNotebook/DACON/Daegu_Car/code/common/**
+JupyterNotebook/DACON/Daegu_Car/code/sh/*
+
+# Kaggle project
+### ignore except codes folder
+JupyterNotebook/Kaggle/*/data/**
+JupyterNotebook/Kaggle/*/models/**
+JupyterNotebook/Kaggle/*/plots/**

@@ -58,12 +58,12 @@ def train_model(latent_dims, discriminator, generator, batch_size,
                 testing_fake_images = generator(testing_random_latent)
                 testing_fake_images = testing_fake_images.reshape(5, 28, 28).cpu().numpy()
                 
-                #plt.figure(figsize=(10, 5))
-                #plt.title("GENERATED IMAGE, EPOCH {}".format(epoch))
-                #for i in range(5):
-                #    plt.subplot('15{}'.format(i+1))
-                #    plt.imshow(testing_fake_images[i], cmap='gray')
-                #plt.show()
+                plt.figure(figsize=(10, 5))
+                plt.title("GENERATED IMAGE, EPOCH {}".format(epoch))
+                for i in range(5):
+#                    plt.subplot('15{}'.format(i+1))
+                   plt.imshow(testing_fake_images[i], cmap='gray')
+                plt.show()
             
     return discriminator, generator
 
