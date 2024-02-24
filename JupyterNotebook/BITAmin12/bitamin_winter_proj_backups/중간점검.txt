@@ -1,0 +1,288 @@
+🔸EVAL START🔸 
+ transformer_seq30_batch1_out10_hidden64_total
+Error Ratio : 0.20340591406388153
+R-squared: 0.02420091072953323
+p-value: 0.6678151691529569
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch1_out10_hidden64_stock
+Error Ratio : 0.045170285749158844
+R-squared: 0.40773334413854123
+p-value: 0.04691566553951645
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch1_out10_hidden128_total
+Error Ratio : 0.15790949689190245
+R-squared: 0.0033182444109712828
+p-value: 0.8744080994952744
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch1_out10_hidden128_stock
+Error Ratio : 0.021649836986617686
+R-squared: 0.00858320675588542
+p-value: 0.799068307239813
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch1_out10_hidden256_total
+Error Ratio : 0.03134187030509285
+R-squared: 0.030070183273077422
+p-value: 0.6318731237661235
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch1_out10_hidden256_stock
+Error Ratio : 0.08912849774778195
+R-squared: 0.18350756947512936
+p-value: 0.2167777269646968
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch1_out20_hidden64_total
+Error Ratio : 0.12142689279073807
+R-squared: 0.1325274326703696
+p-value: 0.11458239319819859
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch1_out20_hidden64_stock
+Error Ratio : 0.05256937979557894
+R-squared: 0.20142606651496409
+p-value: 0.047152417971412286
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch1_out20_hidden128_total
+Error Ratio : 0.10073264555487246
+R-squared: 0.6809471772199985
+p-value: 7.529977632554253e-06
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch1_out20_hidden128_stock
+Error Ratio : 0.056672670137659586
+R-squared: 0.06863049313821179
+p-value: 0.26451862322315933
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch1_out20_hidden256_total
+Error Ratio : 0.17734132087985127
+R-squared: 0.19194372576032226
+p-value: 0.053345262356246106
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch1_out20_hidden256_stock
+Error Ratio : 0.0648624497511141
+R-squared: 0.808850824832575
+p-value: 6.94528409090236e-08
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch5_out10_hidden64_total
+Error Ratio : 0.18482686324370093
+R-squared: 0.018064410189160385
+p-value: 0.7112452271975902
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch5_out10_hidden64_stock
+Error Ratio : 0.033213018527889174
+R-squared: 0.08982298795208299
+p-value: 0.4001781720059202
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch5_out10_hidden128_total
+Error Ratio : 0.19056934468172199
+R-squared: 0.0013718327418683618
+p-value: 0.919089861198946
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch5_out10_hidden128_stock
+Error Ratio : 0.04444178536607116
+R-squared: 0.0288780419680984
+p-value: 0.6388165187587618
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch5_out10_hidden256_total
+Error Ratio : 0.18839317933406846
+R-squared: 0.0715123124925714
+p-value: 0.4550920721472999
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch5_out10_hidden256_stock
+Error Ratio : 0.10605645659503198
+R-squared: 0.158784652791909
+p-value: 0.25404972723450264
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch5_out20_hidden64_total
+Error Ratio : 0.21950058781849488
+R-squared: 0.025305738941137412
+p-value: 0.5029243031307777
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch5_out20_hidden64_stock
+Error Ratio : 0.06761334113211831
+R-squared: 0.00025135467061865313
+p-value: 0.9471067838352186
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch5_out20_hidden128_total
+Error Ratio : 0.22086825643772473
+R-squared: 0.01242496606338006
+p-value: 0.6398834176393241
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch5_out20_hidden128_stock
+Error Ratio : 0.06950847467368643
+R-squared: 0.012629481550015087
+p-value: 0.6371258795209196
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch5_out20_hidden256_total
+Error Ratio : 0.22112430654044454
+R-squared: 0.0004750926782191023
+p-value: 0.927324723436326
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch5_out20_hidden256_stock
+Error Ratio : 0.18543724833076733
+R-squared: 0.000354839359325676
+p-value: 0.9371720923620936
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch32_out10_hidden64_total
+Error Ratio : 0.14734932733810635
+R-squared: 0.0005848508769030758
+p-value: 0.9471291062734758
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch32_out10_hidden64_stock
+Error Ratio : 0.060621499879994135
+R-squared: 0.6375086632044824
+p-value: 0.005616730521835774
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch32_out10_hidden128_total
+Error Ratio : 0.16131011370418688
+R-squared: 0.36844100957409753
+p-value: 0.06275618617288754
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch32_out10_hidden128_stock
+Error Ratio : 0.07587365340092615
+R-squared: 0.36662607673297787
+p-value: 0.06358459481567147
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch32_out10_hidden256_total
+Error Ratio : 0.15871443418402836
+R-squared: 0.0003584422493699835
+p-value: 0.958599842359145
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch32_out10_hidden256_stock
+Error Ratio : 0.4554577254780897
+R-squared: 0.420992236337407
+p-value: 0.04238950669592037
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch32_out20_hidden64_total
+Error Ratio : 0.18387243737209263
+R-squared: 0.003513952023389555
+p-value: 0.803940968392227
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch32_out20_hidden64_stock
+Error Ratio : 0.1863541527895012
+R-squared: 0.019549250821795594
+p-value: 0.5565818871109256
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch32_out20_hidden128_total
+Error Ratio : 0.2035517591670128
+R-squared: 0.0032973999757653916
+p-value: 0.8099690953254222
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch32_out20_hidden128_stock
+Error Ratio : 0.04614536791522046
+R-squared: 0.6543748012297179
+p-value: 1.5738117365811874e-05
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch32_out20_hidden256_total
+Error Ratio : 0.21642833137090375
+R-squared: 0.091032557737318
+p-value: 0.19607587694469844
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch32_out20_hidden256_stock
+Error Ratio : 0.459155300642473
+R-squared: 0.0405319578986737
+p-value: 0.3946877806219411
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch64_out10_hidden64_total
+Error Ratio : 0.17974811491633416
+R-squared: 0.27467722996195176
+p-value: 0.11994102835927438
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch64_out10_hidden64_stock
+Error Ratio : 0.12192657780569638
+R-squared: 1.547448092664716e-05
+p-value: 0.9913950294912005
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch64_out10_hidden128_total
+Error Ratio : 0.18107202227274402
+R-squared: 0.0055201801770417
+p-value: 0.8383675198502897
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch64_out10_hidden128_stock
+Error Ratio : 0.18523701122463784
+R-squared: 0.007122553274429899
+p-value: 0.8166947718331691
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch64_out10_hidden256_total
+Error Ratio : 0.19762415842268108
+R-squared: 7.11839069506004e-05
+p-value: 0.981545254625274
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch64_out10_hidden256_stock
+Error Ratio : 0.4008482072606291
+R-squared: 0.002786739041526265
+p-value: 0.8848440756483577
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch64_out20_hidden64_total
+Error Ratio : 0.21339336524342375
+R-squared: 0.09976053924927264
+p-value: 0.17490851101258473
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch64_out20_hidden64_stock
+Error Ratio : 0.13470131583499953
+R-squared: 0.048198756309810964
+p-value: 0.3523607893108881
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch64_out20_hidden128_total
+Error Ratio : 0.21637235592296905
+R-squared: 0.10767484112254555
+p-value: 0.15781552351304512
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch64_out20_hidden128_stock
+Error Ratio : 0.20359162578758183
+R-squared: 0.01514880238044991
+p-value: 0.6051817550773895
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch64_out20_hidden256_total
+Error Ratio : 0.2313754966805473
+R-squared: 0.019340717458684376
+p-value: 0.5587152608966235
+🔸EVAL END🔸
+🔸EVAL START🔸 
+ transformer_seq30_batch64_out20_hidden256_stock
+Error Ratio : 0.17036554875313795
+R-squared: 0.3568006662201296
+p-value: 0.005419101798296133
+🔸EVAL END🔸

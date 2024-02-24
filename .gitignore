@@ -145,3 +145,10 @@ JupyterNotebook/DACON/Daegu_Car/code/sh/*
 JupyterNotebook/Kaggle/*/data/**
 JupyterNotebook/Kaggle/*/models/**
 JupyterNotebook/Kaggle/*/plots/**
+
+### BITAmin 시계열 1조
+JupyterNotebook/BITAmin12/시계열_1조/chrome-for-testing/**
+JupyterNotebook/BITAmin12/시계열_1조/data/**
+JupyterNotebook/BITAmin12/시계열_1조/models/**
+JupyterNotebook/BITAmin12/시계열_1조/plots/**
+JupyterNotebook/BITAmin12/시계열_1조/webdrivers/**
