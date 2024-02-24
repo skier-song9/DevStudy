@@ -154,3 +154,7 @@ JupyterNotebook/BITAmin12/시계열_1조/plots/**
 JupyterNotebook/BITAmin12/시계열_1조/webdrivers/**
 
 
+### Security Issue
+JupyterNotebook/DACON/Daegu_Car/code/reverse_geocoding_.ipynb
+JupyterNotebook/DACON/Daegu_Car/code/reverse_geocoding_대구광역시행정동.ipynb
+JupyterNotebook/DACON/Daegu_Car/code/reverse_geocoding_동별시간별통행량.ipynb
