@@ -88,8 +88,12 @@ $RECYCLE.BIN/
 JupyterNotebook/kaggle_learns/Pandas/input/
 JupyterNotebook/kaggle_learns/GeoPandas/input/
 
-# largfile
+# large file
 JupyterNotebook/BITAmin12/review_proj/data/mnist_784.csv
+JupyterNotebook/BITAmin12/study/paper/**
+JupyterNotebook/BITAmin12/study/paper/*
+
+
 
 #BITAmin textbook github폴더
 JupyterNotebook/BITAmin12/textbook/pymlrev2-main/
